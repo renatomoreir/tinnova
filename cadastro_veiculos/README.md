@@ -21,19 +21,18 @@ docker compose up -d
 docker ps -a
 
 # 4. Rodar o servidor
-python .\run.py
-
-
 # 5. Endpoints
 
-localhost:5000/                         , ["GET"]
-localhost:5000/                         , ["POST"], { "marca": "chevrolet", "modelo": "gol", "ano": "2000", "descricao": "1.0 Gasolina", "vendido": false}
-localhost:5000/<int:id>                 , ["GET"]
-localhost:5000/<int:id>                 , ["PUT"]
-localhost:5000/<int:id>                 , ["PATCH"]
-localhost:5000/<int:id>                 , ["DELETE"]
-localhost:5000/nao-vendidos             , ["GET"]
-localhost:5000/vendidos                 , ["GET"]
-localhost:5000/distribuicao-decada      , ["GET"]
-localhost:5000/distribuicao-fabricante  , ["GET"]
-localhost:5000/ultimos                  , ["GET"]
+```
+GET     localhost:5000/
+POST    localhost:5000/             { "marca": "chevrolet", "modelo": "gol", "ano": "2000", "descricao": "1.0 Gasolina", "vendido": false }
+GET     localhost:5000/<int:id>
+PUT     localhost:5000/<int:id>
+PATCH   localhost:5000/<int:id>
+DELETE  localhost:5000/<int:id>
+GET     localhost:5000/nao-vendidos
+GET     localhost:5000/vendidos
+GET     localhost:5000/distribuicao-decada
+GET     localhost:5000/distribuicao-fabricante
+GET     localhost:5000/ultimos
+```
